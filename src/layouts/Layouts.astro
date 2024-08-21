@@ -1,0 +1,58 @@
+---
+import BaseHead from '@/components/layouts/BaseHead.astro'
+import TailwindIndicator from '@/components/layouts/tailwind-indicator.astro'
+import { cn } from '@/lib/utils'
+import '@/styles/globals.css'
+import '@/styles/fonts.css'
+
+type Props = {
+	title: string
+	description?: string
+	lang?: string
+	mainClass?: string
+	bodyClass?: string
+}
+
+import Footer from '@/components/layouts/Footer.astro'
+import ProviderAnimations from '@/components/layouts/AnimationProvider.astro'
+import Container from '@/components/layouts/Container.astro'
+import I18NHeader from '@/components/layouts/I18nHeaders.astro'
+import BackgroundDots from '@/components/react/background-dots'
+import { ScrollToTop } from '@/components/react/scroll-to-top'
+import { SITE } from '@/site.config'
+import { getLangFromUrl } from '@/i18n/utils'
+const lang = getLangFromUrl(Astro.url)
+const { title, description, mainClass, bodyClass } = Astro.props as Props
+---
+
+<!doctype html>
+<html lang={lang} class="bg-trancperent text-foreground scroll-smooth">
+	<head>
+		<BaseHead
+			title={`${title} | ${SITE.TITLE[lang]}`}
+			description={`${description} | ${SITE.DESCRIPTION[lang]}`}
+			lang={lang}
+		/>
+		<ProviderAnimations />
+		<I18NHeader />
+	</head>
+	<body class={cn('flex flex-col  antialiased min-h-screen', bodyClass)}>
+		<BackgroundDots />
+		<ScrollToTop client:load />
+		<Container>
+			<main class={cn(mainClass)}>
+				<slot />
+				<TailwindIndicator />
+			</main>
+		</Container>
+		<Footer />
+		<style is:global>
+			body {
+				font-family: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu;
+			}
+			img {
+				content-visibility: auto;
+			}
+		</style>
+	</body>
+</html>

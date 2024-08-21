@@ -1,0 +1,25 @@
+---
+import { LANGUAGES_ARRAY, getLangFromUrl, useTranslations } from '@/i18n/config'
+import Layout from '@/layouts/Layouts.astro'
+
+export const getStaticPaths = () => {
+	return LANGUAGES_ARRAY.map((lang) => ({
+		params: { lang }
+	}))
+}
+
+import { fade } from 'astro:transitions'
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+export const prerender = true
+---
+
+<Layout
+	title={t('site-title')}
+	description={t('site-description')}
+	lang={lang}
+	transition:animate={fade({ duration: '0.4s' })}
+>
+
+</Layout>

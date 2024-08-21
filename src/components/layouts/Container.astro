@@ -1,0 +1,8 @@
+---
+import { cn } from '@/lib/utils'
+const { class: className } = Astro.props
+---
+
+<div class:list={cn(['mx-auto max-w-screen-xl px-5', className])}>
+  <slot />
+</div>

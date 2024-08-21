@@ -1,0 +1,97 @@
+{
+  "name": "fumabun",
+  "type": "module",
+  "version": "1.0.0",
+  "author": "Hrihorii Ilin <devopsick@pm.me>",
+  "license": "MIT",
+  "description": "",
+  "keywords": [],
+  "scripts": {
+    "editorconfig": "editorconfig-checker -exclude \"**/node_modules/**\"",
+    "dev": "bunx --bun astro dev --verbose",
+    "start": "bun astro check --verbose && bunx --bun astro dev --verbose",
+    "build": "bun astro check --verbose && bunx --bun astro build --verbose",
+    "preview": "bunx --bun astro build && bunx --bun astro preview",
+    "browserslist:update": "bunx update-browserslist-db@latest",
+    "format": "biome format . --write",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint . --apply",
+    "lint:fix:unsafe": "biome lint . --apply-unsafe",
+    "biomes": "bunx @biomejs/biome check --write .",
+    "biomes:fix": "bunx @biomejs/biome check --fix --unsafe .",
+    "tailwind:cli": "bunx @tailwindcss/cli@next -i ./src/styles/app.css -o ./src/styles/dist/app.css",
+    "typesafe-i18n": "typesafe-i18n",
+    "ui": "bunx shadcn-ui@latest",
+    "sharp": "bun scripts/sharp.ts"
+  },
+  "engines": {
+    "node": ">=18.19.1 <19 || >=20.15.1 <21 || >=22.6.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/bun": "latest",
+    "@types/html": "^1.0.4",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^22.5.0",
+    "@types/web": "^0.0.155"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "overrides": {
+    "astro-expressive-code": "latest"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/mdx": "^3.1.4",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/ts-plugin": "^1.10.1",
+    "@headlessui/react": "^2.1.2",
+    "@hyper-fetch/core": "^5.7.5",
+    "@hyper-fetch/react": "^5.7.5",
+    "@nanostores/i18n": "^0.12.2",
+    "@nanostores/query": "^0.3.4",
+    "@nanostores/react": "^0.7.3",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@tailwindcss/cli": "^4.0.0-alpha.19",
+    "@tailwindcss/vite": "^4.0.0-alpha.19",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.14.4",
+    "astro-expressive-code": "^0.36.0",
+    "balance-text": "^3.3.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "detect-browser-es": "^0.1.0",
+    "editorconfig-checker": "^5.1.8",
+    "lucide-react": "^0.429.0",
+    "nanostores": "^0.11.2",
+    "next-themes": "^0.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "^4.0.0-alpha.19",
+    "tailwindcss-animate": "^1.0.7",
+    "tsc": "^2.0.4",
+    "zod": "^3.23.8",
+    "zod-i18n-map": "^2.27.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frikadellios/fumabun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Frikadellios/fumabun/issues"
+  },
+  "homepage": "https://github.com/Frikadellios/fumabun#readme",
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "core-js-pure",
+    "esbuild",
+    "sharp"
+  ]
+}
