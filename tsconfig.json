@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
     "lib": ["ESNext", "DOM"],
@@ -21,7 +21,10 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "~/*": [
+        "./src/*"
+      ],
     },
     "plugins": [
       {

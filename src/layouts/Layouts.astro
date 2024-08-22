@@ -4,7 +4,7 @@ import TailwindIndicator from '@/components/layouts/tailwind-indicator.astro'
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
 import '@/styles/fonts.css'
-
+import { Navigation } from '@/components/react/header'
 type Props = {
 	title: string
 	description?: string
@@ -36,6 +36,7 @@ const { title, description, mainClass, bodyClass } = Astro.props as Props
 	</head>
 	<body class={cn('flex flex-col  antialiased min-h-screen', bodyClass)}>
 		<Container>
+            <Navigation client:load />
 			<main class={cn(mainClass)}>
 				<slot />
 				<TailwindIndicator />

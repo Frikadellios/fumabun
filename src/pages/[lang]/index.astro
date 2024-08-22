@@ -1,5 +1,6 @@
 ---
 import NewsSeller from '@/components/NewsSeller.astro'
+
 import { LANGUAGES_ARRAY, getLangFromUrl, useTranslations } from '@/i18n/config'
 import Layout from '@/layouts/Layouts.astro'
 
@@ -8,7 +9,6 @@ export const getStaticPaths = () => {
 		params: { lang }
 	}))
 }
-
 import { fade } from 'astro:transitions'
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
