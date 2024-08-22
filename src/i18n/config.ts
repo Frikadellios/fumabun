@@ -1,13 +1,14 @@
-
+export const baseLocale = 'en'
+export const locales = ['de', 'en', 'es', 'fr', 'pl', 'ru', 'uk']
 
 export const LANGUAGES = {
     en: 'English',
-	  fr: 'Français',
-	  es: 'Español',
-	  ru: 'Русский',
-	  uk: 'Українська',
-	  de: 'German',
-	  pl: 'Polski'
+	fr: 'Français',
+	es: 'Español',
+	ru: 'Русский',
+	uk: 'Українська',
+	de: 'German',
+	pl: 'Polski'
 }
 
 export const LOCALES = {

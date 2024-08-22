@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets'
 import favicon from '@/assets/devopsick-favicon-color.png'
-import Container from './Containers.astro'
+import Containers from './Containers.astro'
 import { SITE, SOCIALS } from '@/site.config'
-import { getLangFromUrl } from '@/i18n/utils'
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
 const lang = getLangFromUrl(Astro.url)
-
+const t = useTranslations(lang)
 const navigation = {
 	connect: [
 		{ name: 'Book Meeting', href: '' },
@@ -31,10 +31,10 @@ const navigation = {
 }
 ---
 
-<footer class="bg-trancperent relative mx-10 my-10 py-5">
+<footer class="bg-trancperent mx-10 my-10 py-5">
 	<div class="animate">
-		<section class="py-5">
-			<Container size="md">
+		<section class="py-15">
+			<Containers  size="md" >
 				<div class="flex items-center justify-center sm:justify-end">
 					<button
 						id="back-to-top"
@@ -67,15 +67,15 @@ const navigation = {
 						<div
 							class="w-full transition-colors duration-300 ease-in-out group-hover:text-black group-hover:dark:text-white"
 						>
-							Back to top
+                            {t('back-to-top')}
 						</div>
 					</button>
 				</div>
-			</Container>
+			</Containers>
 		</section>
 
-		<section class="border-border overflow-hidden whitespace-nowrap border-t">
-			<Container size="md">
+		<section class="my-auto border-trancperent overflow-hidden whitespace-nowrap border-t">
+			<Containers size="md">
 				<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
 					<div class="flex flex-col items-center sm:items-start">
 						<a
@@ -106,7 +106,7 @@ const navigation = {
 
 				{/* Navigations */}
 
-				<div class="mt-16 grid grid-cols-4 gap-14 md:grid-cols-2 lg:mt-0 xl:col-span-2">
+				<div class="my-auto mt-16 grid grid-cols-4 gap-14 md:grid-cols-2 lg:mt-0 xl:col-span-2">
 					<div class="md:mt-0">
 						<h3 class="text-md text-neon-cyan font-semibold leading-6">Connect</h3>
 						<div class="mt-6 space-y-4">
@@ -146,10 +146,10 @@ const navigation = {
 						</div>
 					</div>
 				</div>
-			</Container>
+			</Containers>
 		</section>
 		<section class="border-border overflow-hidden whitespace-nowrap border-t">
-			<Container size="md">
+			<Containers size="md">
 				<div class="grid h-full grid-cols-1 gap-3 sm:grid-cols-2">
 					<div
 						class="order-2 flex flex-col items-center justify-center sm:order-1 sm:items-start"
@@ -203,7 +203,7 @@ const navigation = {
 						}
 					</div>
 				</div>
-			</Container>
+			</Containers>
 		</section>
 	</div>
 	<div class="text-foreground flex space-x-6 text-sm">

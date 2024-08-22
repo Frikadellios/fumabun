@@ -33,6 +33,9 @@ export const defaultLang = 'es'
 
 export const ui = {
 	es: {
+        'newseller-title': 'Subscribe to our newsletter',
+        'newseller-description': 'Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.',
+        'back-to-top': 'back-to-top',
 		'404-title': '404 title',
 		'404-description': '404 description',
 		'category-one': 'Category One',
@@ -93,6 +96,9 @@ export const ui = {
 		'toast-shop-cta': 'Tienda'
 	},
 	pl: {
+        'newseller-title': 'Subscribe to our newsletter',
+        'newseller-description': 'Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.',
+        'back-to-top': 'back-to-top',
 		'404-title': '404 title',
 		'404-description': '404 description',
 		'category-one': 'Category One',
@@ -153,6 +159,9 @@ export const ui = {
 		'toast-shop-cta': 'Tienda'
 	},
 	en: {
+        'newseller-title': 'Subscribe to our newsletter',
+        'newseller-description': 'Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.',
+        'back-to-top': 'back-to-top',
 		'404-title': '404 title',
 		'404-description': '404 description',
 		'category-one': 'Category One',
@@ -214,6 +223,9 @@ export const ui = {
 		'toast-shop-cta': 'Shop'
 	},
 	de: {
+        'newseller-title': 'Subscribe to our newsletter',
+        'newseller-description': 'Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.',
+        'back-to-top': 'back-to-top',
 		'404-title': '404 title',
 		'404-description': '404 description',
 		'category-one': 'Category One',
@@ -275,6 +287,9 @@ export const ui = {
 		'toast-shop-cta': 'Shop'
 	},
 	fr: {
+        'newseller-title': 'Subscribe to our newsletter',
+        'newseller-description': 'Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.',
+        'back-to-top': 'back-to-top',
 		'404-title': '404 title',
 		'404-description': '404 description',
 		'category-one': 'Category One',
@@ -336,6 +351,9 @@ export const ui = {
 		'toast-shop-cta': 'Shop'
 	},
 	ru: {
+        'newseller-title': 'Subscribe to our newsletter',
+        'newseller-description': 'Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.',
+        'back-to-top': 'back-to-top',
 		'404-title': '404 title',
 		'404-description': '404 description',
 		'category-one': 'Category One',
@@ -397,6 +415,9 @@ export const ui = {
 		'toast-shop-cta': 'Shop'
 	},
 	uk: {
+        'newseller-title': 'Subscribe to our newsletter',
+        'newseller-description': 'Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.',
+        'back-to-top': 'back-to-top',
 		'404-title': '404 title',
 		'404-description': '404 description',
 		'category-one': 'Category One',
